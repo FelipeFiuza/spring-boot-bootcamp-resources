@@ -4,5 +4,7 @@
         <title>Traffic Sign</title>
     </head>
     <body>
+        <h1 th:text="'Speed: ' + ${speed}"></h1>
+        <img th:src="${speed <= 60} ? '/images/speed-limit.png' : '/images/slow-down.png'" width="200px">
     </body>
 </html>

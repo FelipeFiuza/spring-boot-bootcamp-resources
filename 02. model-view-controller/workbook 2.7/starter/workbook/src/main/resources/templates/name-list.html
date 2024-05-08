@@ -1,8 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
     <head>
         <title>Name</title>
     </head>
     <body>
+        <p th:text="${name}" style="font-weight:bold"></p>
+        <ul>
+            <li th:text="${#strings.substring(name, 0, 1)}" style="font-weight:bold"></li>
+            <li th:text="${#strings.substring(name, 0, 2)}" style="font-weight:bold"></li>
+            <li th:text="${#strings.substring(name, 0, 3)}" style="font-weight:bold"></li>
+            <li th:text="${#strings.substring(name, 0, 4)}" style="font-weight:bold"></li>
+            <li th:text="${#strings.substring(name, 0, 5)}" style="font-weight:bold"></li>
+            <li th:text="${#strings.substring(name, 0, 6)}" style="font-weight:bold"></li>
+        </ul>
     </body>
 </html>

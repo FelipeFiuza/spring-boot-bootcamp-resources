@@ -9,6 +9,9 @@ public class WorkbookController {
 
     @GetMapping(value="/")
     public String getMethodName(Model model) {
+        model.addAttribute("budget", 10000);
+        model.addAttribute("make", "Subaru");
+
         return "dealership";
     }
     
