@@ -19,9 +19,7 @@
                 </select>
                 <p style="color:red" th:errors="*{name}"></p>
                 <input type="text" placeholder="Name" th:field="*{name}">
-                <!-- <p style="color:red" th:errors="*{price}"></p>
-                <p style="color:red" th:errors="*{discount}"></p> -->
-                <div style="width:100%; margin:20px 0" th:if="${#fields.hasErrors('all')}">
+                <div style="width:100%; margin:20px 0" th:if="${#fields.hasErrors('price') or #fields.hasErrors('discount')}">
                     <span style="color:red; text-align:left; float:left" th:errors="*{price}"></span>
                     <span style="color:red; text-align:right; float:right" th:errors="*{discount}"></span>
                 </div>
